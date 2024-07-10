@@ -141,7 +141,7 @@ INNER JOIN staff ON staff.id = course_staff.staff
 INNER JOIN people ON people.id = staff.id
 WHERE people.title = 'AProf'
 group by courses.id 
-having count (distinct course_enrolments.student)>=650 and count(distinct people.id)=2
+having count (distinct course_enrolments.student)>=650 and count(distinct staff.id)=2
 ;
 
 
